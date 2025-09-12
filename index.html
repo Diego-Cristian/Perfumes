@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título e icone da Página -->
+    <title>DC Fragancias</title>
+    <link rel="website icon" type="png" href="imgs/logogi.png">
+    <!-- Conexão com o css e o import icones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Sessão Cabeçalho -->
+    <header class="header">
+        <div class="logo-container">
+            <img class="logogi" src="./imgs/logogi.png" alt="logo">
+            <a href="#" class="logo">
+                <h1>Fragancias BABY</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Sessão Home (Inicio) -->
+    <section class="home">
+        <div class="home-content">
+            <h3>Catálogo de Perfumes</h3>
+        </div>
+    </section>
+
+    <!-- Sessão About (sobre) -->
+    <section class="Sobre" id="Sobre">
+        <div class="sobre-content">
+            <h3>Sobre Nosotros</h3>
+            <p>Descubre la esencia perfecta para cada tipo de cuerpo: ¡perfumes que realzan tu singularidad y elegancia!</p>
+            <div class="social-media">
+                <a class="insta" href="https://www.instagram.com" target="_blank" style="--i:6;"><i
+                        class='bx bxl-instagram'></i></a>
+            </div>
+        </div>
+        <div class="sobre-img">
+            <img src="./imgs/perfume.png" alt="">
+        </div>
+    </section>
+
+    <section class="catalogo" id="Catalogo">
+        <div class="filter-dropdown">
+            <button class="dropbtn">
+                <i class='bx bx-filter-alt'></i>
+            </button>
+            <div class="dropdown-content" id="filters">
+                <button onclick="showAll()" class="filter-button" data-filter="todos">Todos</button>
+                <button onclick="filterPerfumes('feminino')" class="filter-button"
+                    data-filter="feminino">Femenino</button>
+                <button onclick="filterPerfumes('masculino')" class="filter-button"
+                    data-filter="masculino">Masculino</button>
+                <button onclick="filterPerfumes('amadeirado')" class="filter-button"
+                    data-filter="amadeirado">Amaderados</button>
+                <button onclick="filterPerfumes('cítrico')" class="filter-button"
+                    data-filter="cítrico">Citricos</button>
+                <button onclick="filterPerfumes('floral')" class="filter-button" data-filter="floral">Florais</button>
+            </div>
+        </div>
+        <div class="catalogo-content">
+            <h1>Nuestro Catálogo</h1>
+
+            <ul class="perfume-list">
+                <li class="perfume-item" data-id="1" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.38 (1).jpeg" alt="Perfume 1">
+                    <h3>ABSINTO</h3>
+                    <p>Valor: :  <br>Tipo: Amaderado</p>
+                    <button class="open-modal" data-modal="modal-1">Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.38.jpeg" alt="Perfume 1">
+                    <h3>ACCORDES</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-2" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.39 (1).jpeg" alt="Perfume 1">
+                    <h3>ACQUA FRESCA</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-3" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.39.jpeg" alt="Perfume 1">
+                    <h3>ACQUA DI GIÓ</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-4" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.40 (1).jpeg" alt="Perfume 1">
+                    <h3>ALFAZEMA</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-5" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.40.jpeg" alt="Perfume 1">
+                    <h3>AMARIGE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-6" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado" data-genero=""
+                    data-familia="amadeirado">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.46 (3).jpeg" alt="Perfume 1">
+                    <h3>ANAIS ANAIS</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-7" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.45.jpeg" alt="Perfume 1">
+                    <h3>ANGE OU DÉMON</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-8" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.44.jpeg" alt="Perfume 1">
+                    <h3>ANGEL</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-9" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ARMANI DIAMONDS</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-10" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-11" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>BLACK XS</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-12" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CAFÉ</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-13" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CAROLINA HERRERA</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-14" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CH</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-15" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CHLOÉ</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-16" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CHANEL 5</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-17" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COCO MADEMOISELLE</h3>
+                    <p>Valor: <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-18" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COFFE WOMAN</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-19" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>CKIN2U</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-20" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 21">
+                    <h3>212 WOMAN</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-22" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 SEXY</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-23" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 VIP ROSE</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-24" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>212 VIP FEMME</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-25" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DOLCE & GABANNA</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-25" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>D&G LIGHT BLUE</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-27" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DIESEL FUEL FOR LIFE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-28" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DUNE DIOR</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-29" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EAU DE LACOSTE</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-30" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-31" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO CHOC</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-32" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EGEO DOLCE</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-33" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ETERNITY</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-34" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ESSENCIAL</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-35" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>EUPHORIA</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-36" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FANTASY</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-37" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-38" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA IN BLUE</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-39" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLORATTA IN GOLD</h3>
+                    <p>Valor: <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-40" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>FLOWER BY KENZO</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-41" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GABRIELA SABATINI</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-42" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GLAMOUR</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-43" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GOOD GIRL</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-44" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HIPNOTIC POISON</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-45" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HYPNOSE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-46" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HUMOR CHOCOLATE</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-47" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>INAMORATA</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-48" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>INSENSATEZ</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-49" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>J'ADORE JASMIM</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-50" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JEAN PAUL GAUTIER</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-51" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JOOP! FOR WOMAN</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-52" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>KAIAK KENZO WORLD</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-53" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>KRISKA</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-54" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LADY MILLION</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-55" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LAGUNA</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-56" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LA VIE EST BELLE</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-57" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LANUIT TRÈSOR</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-58" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>L'EXTASE C. DE ROSE</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-59" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LILY ESSENCE</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-60" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LINDA INSPIRAÇÃO</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-61" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LOLITA LEMPICKA</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-62" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LOU LOU</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-63" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MADEIRA DO ORIENTE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-64" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MADEMOISELLE</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-65" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MANIFESTO</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-66" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>MISS DIOR</h3>
+                    <p>Valor: <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-67" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>NATURA UNA</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-68" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>NINA RICCI</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-69" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>OLYMPÊA</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-70" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>OLYMPÊA ACQUA</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-71" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PALOMA PICASSO</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-72" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POISON</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-73" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POISON GIRL</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-74" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PRADA</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-75" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>PRADA CANDY</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-76" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ROSAS</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-77" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>SCANDALL</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-78" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ABERCROMBIE ACQUA D'GIÓ</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-79" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ALLURE</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-80" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ALLURE HOMME SPORT</h3>
+                    <p>Valor:<br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-81" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ANIMALE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-82" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ARMANI CODE</h3>
+                    <p>Valor: <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-83" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-84" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>AZARRO SILVER BLACK</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-85" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="feminino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>COCO MADEMOISELLE</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-86" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DIOR</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-87" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>DOLCE & GABANNA</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-88" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>GIVENCHY</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-89" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>HUGO BOSS</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-90" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>JEAN PAUL GAUTIER LE MALE</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-91" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>LANCÔME</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-92" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>POLO</h3>
+                    <p>Valor: <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-93" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>ROBERTO CAVALLI</h3>
+                    <p>Valor: <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-94" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="amadeirado">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>VIKTOR & ROLF</h3>
+                    <p>Valor:  <br>Tipo: Amadeirado</p>
+                    <button class="open-modal" data-modal="modal-95" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="floral">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>VINHO PORTO</h3>
+                    <p>Valor:  <br>Tipo: Floral</p>
+                    <button class="open-modal" data-modal="modal-96" >Ver Detalles</button>
+                </li>
+                <li class="perfume-item" data-genero="masculino" data-familia="cítrico">
+                    <img src="./imgs/perfumefoto.png" alt="Perfume 1">
+                    <h3>YVES SAINT LAURENT</h3>
+                    <p>Valor:  <br>Tipo: Cítrico</p>
+                    <button class="open-modal" data-modal="modal-97" >Ver Detalles</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modals -->
+<div id="modal-1" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/WhatsApp Image 2025-09-03 at 23.32.38 (1).jpeg" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-2" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-3" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-4" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-5" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-6" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-7" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-8" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-9" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-10" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-11" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-12" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-13" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-14" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-15" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-16" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-17" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-18" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-19" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-20" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-21" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-22" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-23" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-24" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-25" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-26" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-27" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-28" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-29" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-30" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-31" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-32" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-33" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-34" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-35" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-36" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-37" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-38" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-39" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-40" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-41" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-42" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-43" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-44" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-45" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-46" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-47" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-48" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-49" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-50" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-51" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-52" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-53" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-54" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-55" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-56" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-57" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-58" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-59" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-60" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-61" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-62" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-63" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-64" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-65" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-66" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-67" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-68" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-69" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-70" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-71" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-72" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-73" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-74" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-75" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-76" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-77" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-78" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-79" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-80" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-81" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-82" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-83" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-84" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-85" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-86" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-87" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-88" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-89" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-90" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-91" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-92" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-93" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-94" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-95" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-96" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<div id="modal-97" class="modal-container">
+    <div class="modal">
+        <button class="modal-close"><i class='bx bx-x-circle'></i></button>
+        <div class="modal-content">
+            <img src="./imgs/perfumefoto.png" alt="ABSINTO">
+            <p>Descripcion detallada de perfume</p>
+            <a href="https://web.whatsapp.com/" target="_blank"  class="buy-button">Haga su pedido Yá</a>
+        </div>
+    </div>
+</div>
+<!-- Derechos de autor Reservados  -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Derechos de autor &copy; 2025 Copyright Desarrollador DC <i
+                    class='bx bxs-store-alt'></i></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
