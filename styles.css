@@ -53,7 +53,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #f5f9ff;
     --text-color: #fff;
-    --main-color: #8FBC8F;
+    --main-color: #99aaa2;
 }
 
 html{
@@ -82,12 +82,12 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    animation: sliderLeft 2s ease forwards;
+    animation: sliderLeft 4s ease forwards;
 }
 
 .logogi {
     width: 5vw;
-    margin-right: 5px; /* Adicione um espaçamento entre a logo e o texto */
+    margin-right: 20px; /* Adicione um 20espaçamento entre a logo e o texto */
 }
 
 .logo {
@@ -108,7 +108,7 @@ body {
     align-items: center;
     padding: 45px 5%;
     background-color: var(--main-color);
-    background-image: url('./imgs/logogi2.png'); /* Adicione a imagem de fundo aqui */
+    background-image: url('./imgs/logogi22.png'); /* Adicione a imagem de fundo aqui */
     background-position: center;
 }
 .home::before {
